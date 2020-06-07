@@ -10,6 +10,8 @@ import Box from "@material-ui/core/Box"
 import CssBaseline from "@material-ui/core/CssBaseline"
 import Typography from "@material-ui/core/Typography"
 
+import Home from "../components/home"
+
 import SEO from "../components/seo"
 
 const useStyles = makeStyles(theme => ({
@@ -42,6 +44,10 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
+const signIn = props => {
+  alert("Successfull Login")
+}
+
 const IndexPage = () => {
   const classes = useStyles()
 
@@ -62,7 +68,7 @@ const IndexPage = () => {
             </Typography>
           </CardContent>
           <CardContent className={classes.content}>
-            <TextField id="standard-basic" label="E-mail" />
+            <TextField id="standard-basic" label="Username" />
 
             <pre />
             <TextField
@@ -79,6 +85,7 @@ const IndexPage = () => {
               variant="contained"
               color="primary"
               size="large"
+              onClick={signIn}
             >
               Sign In
             </Button>
